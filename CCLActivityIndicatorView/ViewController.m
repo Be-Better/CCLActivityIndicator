@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CCLActivityView.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    UIView * view = [[CCLActivityView alloc]initWithFrame:CGRectMake(50, 50, 100, 100)];
+    [self.view addSubview:view];
+
 }
 
 - (void)didReceiveMemoryWarning {

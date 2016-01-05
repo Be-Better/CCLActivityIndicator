@@ -79,8 +79,9 @@ static const CGFloat kWidth = 6.0;
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-//        self.backgroundColor = [UIColor clearColor];
-        [self startAnimating];
+        self.backgroundColor = [UIColor clearColor];
+//        [self startAnimating];
+        [self startAnimating1];
     }
     return self;
 }
@@ -91,35 +92,38 @@ static const CGFloat kWidth = 6.0;
         float animationDuration = 0.8;
         NSMutableArray * animationImages = [NSMutableArray array];
         
-        self.layer.contents = (__bridge id)([self cclActivityView:0 scale:[UIScreen mainScreen].nativeScale].CGImage);
         
-            for (int i = 0; i < kNumberOfFrames; i++) {
-                [animationImages addObject:[[self cclActivityView:i scale:[UIScreen mainScreen].nativeScale] CGImage]];
-            }
-        
-            CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
-            animation.keyPath = @"contents";
-            animation.calculationMode = kCAAnimationDiscrete;
-            animation.duration = animationDuration;
-            animation.repeatCount = HUGE;
-            animation.values = animationImages;
-            animation.removedOnCompletion = false;
-            animation.fillMode = kCAFillModeBoth;
-            [self.layer addAnimation:animation forKey:@"contents"];
-        
-        //    CGAffineTransform transform = CGAffineTransformIdentity;
-        //    transform = CGAffineTransformRotate(transform, M_PI);
-        //
-        //    CABasicAnimation * animation = [CABasicAnimation animationWithKeyPath:@"transform"];
-        //    animation.toValue = [NSValue valueWithCGAffineTransform:transform];
-        //    animation.cumulative = YES;
-        //    animation.duration = animationDuration;
-        //    animation.repeatCount = HUGE;
-        //    animation.autoreverses = YES;
-        //    animation.removedOnCompletion = NO;
-        //    animation.fillMode = kCAFillModeForwards;
-        //    [self.layer addAnimation:animation forKey:@"transform"];
+        for (int i = 0; i < kNumberOfFrames; i++) {
+            [animationImages addObject:[[self cclActivityView:i scale:[UIScreen mainScreen].nativeScale] CGImage]];
+        }
+    
+        CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
+        animation.keyPath = @"contents";
+        animation.calculationMode = kCAAnimationDiscrete;
+        animation.duration = animationDuration;
+        animation.repeatCount = HUGE;
+        animation.values = animationImages;
+        animation.removedOnCompletion = false;
+        animation.fillMode = kCAFillModeBoth;
+        [self.layer addAnimation:animation forKey:@"contents"];
     }
+}
+
+- (void)startAnimating1 {
+        self.layer.contents = (__bridge id)([self cclActivityView:0 scale:[UIScreen mainScreen].nativeScale].CGImage);
+
+        CATransform3D transform = CATransform3DMakeRotation(M_PI, 0, 0, 1);
+
+        CABasicAnimation * animation = [CABasicAnimation animationWithKeyPath:@"transform"];
+        animation.toValue = [NSValue valueWithCATransform3D:transform];
+        animation.cumulative = YES;
+        animation.duration = 0.5;
+        animation.repeatCount = HUGE_VALF;
+        animation.autoreverses = NO;
+        animation.removedOnCompletion = NO;
+        animation.fillMode = kCAFillModeForwards;
+        [self.layer addAnimation:animation forKey:@"transform"];
+
 }
 
 - (void)stopAnimating {
