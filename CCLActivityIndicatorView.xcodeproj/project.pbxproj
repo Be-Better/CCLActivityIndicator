@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04DC1F0C1C2C1DF300E5732C /* CCLActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DC1F0B1C2C1DF300E5732C /* CCLActivityView.m */; };
 		7438C9851C2AF38F001DE3F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7438C9841C2AF38F001DE3F7 /* main.m */; };
 		7438C9881C2AF38F001DE3F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7438C9871C2AF38F001DE3F7 /* AppDelegate.m */; };
 		7438C98B1C2AF38F001DE3F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7438C98A1C2AF38F001DE3F7 /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04DC1F0A1C2C1DF300E5732C /* CCLActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLActivityView.h; sourceTree = "<group>"; };
+		04DC1F0B1C2C1DF300E5732C /* CCLActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLActivityView.m; sourceTree = "<group>"; };
 		7438C9801C2AF38F001DE3F7 /* CCLActivityIndicatorView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCLActivityIndicatorView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7438C9841C2AF38F001DE3F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7438C9861C2AF38F001DE3F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 				7438C9871C2AF38F001DE3F7 /* AppDelegate.m */,
 				7438C9891C2AF38F001DE3F7 /* ViewController.h */,
 				7438C98A1C2AF38F001DE3F7 /* ViewController.m */,
+				04DC1F0A1C2C1DF300E5732C /* CCLActivityView.h */,
+				04DC1F0B1C2C1DF300E5732C /* CCLActivityView.m */,
 				7438C98C1C2AF38F001DE3F7 /* Main.storyboard */,
 				7438C98F1C2AF38F001DE3F7 /* Assets.xcassets */,
 				7438C9911C2AF38F001DE3F7 /* LaunchScreen.storyboard */,
@@ -151,6 +156,7 @@
 			files = (
 				7438C98B1C2AF38F001DE3F7 /* ViewController.m in Sources */,
 				7438C9881C2AF38F001DE3F7 /* AppDelegate.m in Sources */,
+				04DC1F0C1C2C1DF300E5732C /* CCLActivityView.m in Sources */,
 				7438C9851C2AF38F001DE3F7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +306,7 @@
 				7438C9991C2AF38F001DE3F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
