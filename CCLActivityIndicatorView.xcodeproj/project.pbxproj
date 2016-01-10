@@ -67,10 +67,6 @@
 				7438C98A1C2AF38F001DE3F7 /* ViewController.m */,
 				04DC1F0A1C2C1DF300E5732C /* CCLActivityView.h */,
 				04DC1F0B1C2C1DF300E5732C /* CCLActivityView.m */,
-				7438C98C1C2AF38F001DE3F7 /* Main.storyboard */,
-				7438C98F1C2AF38F001DE3F7 /* Assets.xcassets */,
-				7438C9911C2AF38F001DE3F7 /* LaunchScreen.storyboard */,
-				7438C9941C2AF38F001DE3F7 /* Info.plist */,
 				7438C9831C2AF38F001DE3F7 /* Supporting Files */,
 			);
 			path = CCLActivityIndicatorView;
@@ -79,6 +75,10 @@
 		7438C9831C2AF38F001DE3F7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7438C98C1C2AF38F001DE3F7 /* Main.storyboard */,
+				7438C98F1C2AF38F001DE3F7 /* Assets.xcassets */,
+				7438C9911C2AF38F001DE3F7 /* LaunchScreen.storyboard */,
+				7438C9941C2AF38F001DE3F7 /* Info.plist */,
 				7438C9841C2AF38F001DE3F7 /* main.m */,
 			);
 			name = "Supporting Files";
